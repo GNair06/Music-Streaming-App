@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Blacklisted Users{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <h1>Blacklisted users.</h1><br>
+    <table>
+        {% for user in blacklist_lst %}
+        <tr>
+            <td><p class="song_artist"><b>username: </b>{{ user.name }}</p></td>
+            <td><p class="song_artist"><b>role: </b>{{ user.role }}</p></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Lyrics{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <p style="text-align: center;">
+        <h4 style="text-align: right;">{{this_song.date}}</h4>
+        <h3><i><b>{{ title }} by {{ this_song.creator }}</b></i></h3>
+        <h4 style="border: 1px solid; padding: 50px; margin-bottom: 70px;"><i>{{lyrics}}</i></h4>
+    </p>
+{% endblock %}

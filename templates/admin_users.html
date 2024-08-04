@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}All Users{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <h1>These are all the users.</h1>
+    <table style="text-align: center;">
+        <tr>
+            <th><p class="song_artist">Sr. No.</p></th>
+            <th><p class="song_artist">Name</p></th>
+            <th><p class="song_artist">Role</p></th>
+            <th><p class="song_artist">Action</p></th>
+        </tr>
+        {% for user in all_users %}
+        <tr>
+            <td><p class="song_artist">{{ loop.index }}</p></td>
+            <td><p class="song_artist">{{ user.name }}</p></td>
+            <td><p class="song_artist">{{ user.role }}</p></td>
+            <td><p class="song_artist"><a href="/{{ user.id }}/blacklist">Blacklist/Whitelist</a></p></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

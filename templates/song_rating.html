@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Song Rating{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form class="small_form", action="/{{this_song.id}}/song_rating", method="post">
+        <label for="ratings"><h3>Rate this song:</h3></label>
+
+        <select name="ratings" id="ratings" class="select">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+        </select>
+
+        <input type="submit" value="submit" class="button">
+    </form>
+{% endblock %}

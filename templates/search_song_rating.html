@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Search Song Rating{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form class="small_form", action="/search_song_rating", method="post">
+        <label for="score"><h3>Select:</h3></label>
+
+        <select name="score" id="score" class="select">
+        <option value=1>>= 1</option>
+        <option value=2>>= 2</option>
+        <option value=3>>= 3</option>
+        <option value=4>>= 4</option>
+        <option value=5>5</option>
+        </select>
+
+        <input type="submit" value="search" class="button">
+    </form>
+{% endblock %}

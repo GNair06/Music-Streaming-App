@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Albums{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <h3 class="album_title"><b>{{ album.name }}</h3>
+    <p><a href="/{{album.id}}/album_rating">rate</a></p>
+    <table>
+        {% for song in album.songs %}
+        <tr>
+            <td><p class="song_title"><b>{{ song.title }}</b></p></td>
+                <td><p class="song_genre">genre: <i>{{ song.genre_name }}</i></p></td>
+                <td><p class="song_date">date: <i>{{ song.date }}</i></p></td>
+                <td><p class="song_dur">duration: <i>{{ song.duration }}</i></p></td>
+                <td><a href="/{{song.id}}/read_lyrics"><p class="song_lyrics">read lyrics</p></a></td>
+                <td><a href="/play"><p class="song_play">play</p></a></td>
+            <td><a href="/{{album.id}}/{{song.id}}/delete_from_album"><p class="song_play">delete</p></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

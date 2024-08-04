@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Song Genre{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>genre</th>
+            <th>date</th>
+            <th>duration</th>
+            <th>lyrics</th>
+            <th>play</th>
+            <th>rate</th>
+        </tr>
+        {% for song in lst %}
+        <tr>
+            <td><p class="song_title"><b>{{ song.title }}</b></p></td>
+            <td><p class="song_artist">artist: <i>{{ song.user.name }}</i></p></td>
+            <td><p class="song_genre">genre: <i>{{ song.genre_name }}</i></p></td>
+            <td><p class="song_date">date: <i>{{ song.date }}</i></p></td>
+            <td><p class="song_dur">duration: <i>{{ song.duration }}</i></p></td>
+            <td><a href="/{{song.id}}/read_lyrics"><p class="song_lyrics">read lyrics</p></a></td>
+            <td><a href="/play"><p class="song_play">play</p></a></td>
+            <td><a href="/{{song.id}}/song_rating"><p class="song_play">rate</p></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

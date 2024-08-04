@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block body %}
+    <div class="row3" id="login">
+        <div class="column3"><a href="/admin_login"><h1>Admin login</h1></a></div>
+        <div class="column3"><a href="/user_login"><h1>User login</h1></a></div>
+        <div class="column3"><a href="/register"><h1>Register</h1></a></div>
+    </div>
+{% endblock %}
+
+

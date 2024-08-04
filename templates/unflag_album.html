@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Flag/ Unflag{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<div style="text-align: center; margin: 150px;">
+    <h1>This album has been flagged.</h1>
+    <a href="/{{this_album.id}}/unflag_album"><h1>Click here to unflag this album.</h1></a>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Flag/ Unflag{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<div style="text-align: center; margin: 150px;">
+    <h1>This song has been flagged.</h1>
+    <a href="/{{this_song.id}}/unflag"><h1>Click here to unflag this song.</h1></a>
+</div>
+{% endblock %}

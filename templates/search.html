@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<h3 style="text-align: center;">Search Songs</h3>
+<div class="row2">
+    <a href="/search_song_title" class="column2"><h2>Song Title</h2></a>
+    <a href="/search_song_rating" class="column2"><h2>Song Rating</h2></a>
+</div><br>
+<div class="row2">
+    <a href="/search_song_genre" class="column2"><h2>Song Genre</h2></a>
+    <a href="/search_song_artist" class="column2"><h2>Song Artist</h2></a>
+</div><br>
+<h3 style="text-align: center;">Search Albums</h3>
+<div class="row2">
+    <a href="/search_album_title" class="column2"><h2>Album Title</h2></a>
+    <a href="/search_album_rating" class="column2"><h2>Album Rating</h2></a>
+</div>
+{% endblock %}

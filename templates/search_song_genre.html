@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Search Song Genre{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form class="small_form", action="/search_song_genre", method="post">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre"><br><br>
+       
+        <input type="submit" value="search" class="button">
+    </form>
+{% endblock %}

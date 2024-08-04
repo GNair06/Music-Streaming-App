@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Edit Song{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form action="/{{this_user.id}}/{{this_song.id}}/edit_song", method="post">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre_name"><br><br>
+
+        <label for="lyrics">Lyrics</label>
+        <input type="text" id="lyrics" name="lyrics"><br><br>
+       
+        <input type="submit" value="submit" class="button">
+    </form>
+{% endblock %}

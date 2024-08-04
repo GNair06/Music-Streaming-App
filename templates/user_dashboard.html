@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}User Dashboard{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center;">This is {{this_user.name}}'s dashboard.</h1><br>
+
+    <div class="row2">
+        <a href="/top_songs" class="column2"><h1>Top Songs</h1></a>
+        <a href="/top_albums" class="column2"><h1>Top Albums</h1></a>
+    </div><br>
+
+    <div class="row2">
+        <a href="/{{this_user.id}}/all_songs" class="column2"><h1>Songs</h1></a>
+    <a href="/{{this_user.id}}/all_albums" class="column2"><h1>Albums</h1></a>
+    </div><br>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="/{{this_user.id}}/creator"><h3>Click here to register as a creator!</h3></a></li>
+        <li class="list-group-item"><a href="/{{this_user.id}}/playlist"><h3>Click here to create a new playlist!</h3></a></li>
+        <li class="list-group-item"><a href="/{{this_user.id}}/my_playlist"><h3>My playlists!</h3></a></li>
+        <li class="list-group-item"><a href="/search_playlist"><h3>Search playlist</h3></a><br></li>
+    </ul>
+
+{% endblock %}

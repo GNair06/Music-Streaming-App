@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form class="small_form", action="/register", method="post">
+        <h2 style="text-align: center;">Register</h2><br>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password"><br><br>
+       
+        <input type="submit" value="register" class="button">
+    </form>
+{% endblock %}

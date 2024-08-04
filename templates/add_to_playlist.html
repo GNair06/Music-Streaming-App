@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Add to playlist{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <form action="/{{this_playlist.id}}/add_to_playlist", method="post">
+        <label for="title">Song Title</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <input type="submit" value="add song" class="button">
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Statistics{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+<div class="row3" id="login">
+    <div class="column3"><a href="/song_graph"><h2>Song average rating</h2></a></div>
+    <div class="column3"><a href="/album_graph"><h2>Album average rating</h2></a></div>
+    <div class="column3"><a href="/creator_graph"><h2>Creator average rating</h2></a></div>
+</div>
+{% endblock %}

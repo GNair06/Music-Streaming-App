@@ -1,0 +1,139 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.column3 {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 100px;
+    background-color: rgb(232, 216, 224);
+}
+
+.column_blank{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 100px;
+    background-color: white;
+}
+
+#login {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+  
+.row3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 100px;
+    background-color: rgb(232, 216, 224);
+}
+  
+.row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    background-color: rgb(232, 216, 224);
+}
+
+.song_row{
+    margin: 10px;
+    padding: 50px;
+}
+
+.song_title {
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(232, 216, 224);
+}
+
+.song_artist {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_genre {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_date {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_dur {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_lyrics {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_play {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.song_rate {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.album_title {
+    padding: 20px;
+    background-color: rgb(200, 208, 215);
+}
+
+.button{
+    background-color: rgb(232, 216, 224);
+    padding: 5px 15px;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(200, 198, 199, 0.249);
+}
+
+.small_form{
+    text-align: center;
+    padding: 200px;
+}
+
+.select{
+    width: 100px;
+    padding: 6px 20px;
+}
+
+#lyrics{
+    height: 500px;
+    width: 500px;
+}
+
+.big_form{
+    margin: 20px;
+}

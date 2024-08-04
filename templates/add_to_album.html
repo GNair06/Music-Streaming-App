@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}add to album{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block body %}
+    <form action="/{{this_album.id}}/add_to_album", method="post">
+        <label for="title">Song Title</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre_name"><br><br>
+
+        <label for="date">Date</label>
+        <input type="text" id="date" name="date"><br><br>
+
+        <label for="duration">Duration</label>
+        <input type="text" id="duration" name="duration"><br><br>
+
+
+        <label for="lyrics">Lyrics</label>
+        <input type="text" id="lyrics" name="lyrics"><br><br>
+       
+
+        <input type="submit" value="add song" class="button">
+    </form>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Admin Dashboard</h1><br>
+        
+    <div class="row2">
+        <div class="column2"><h1>{{user_len}} users!</h1></div>
+        <div class="column2"><h1>{{creator_len}} creators!</h1></div>
+    </div><br>
+
+    <div class="row3">
+        <div class="column3"><h1>{{song_len}} songs!</h1></div>
+        <div class="column3"><h1>{{album_len}} albums!</h1></div>
+        <div class="column3"><h1>{{genre_len}} genres!</h1></div>
+    </div><br>
+
+    <div class="row3">
+        <div class="column_blank"></div>
+        <div class="column3"><a href="/statistics"><h1>App statistics</h1></a></div>
+        <div class="column_blank"></div>
+    </div><br>
+
+    <div class="row2">
+        <a href="/top_songs" class="column2"><h1>Top Songs</h1></a>
+        <a href="/top_albums" class="column2"><h1>Top Albums</h1></a>
+    </div><br>
+
+    <div class="row2">
+        <a href="/admin_users" class="column2"><h1>All Users</h1></a>
+        <a href="/blacklisted" class="column2"><h1>Blacklisted Users</h1></a>
+    </div><br>
+
+    <div class="row2">
+        <a href="/admin_songs" class="column2"><h1>All Songs</h1></a>
+        <a href="/flagged" class="column2"><h1>Flagged Songs</h1></a>
+    </div><br>
+    
+    <div class="row2">
+        <a href="/admin_albums" class="column2"><h1>All Albums</h1></a>
+        <a href="/flagged_albums" class="column2"><h1>Flagged Albums</h1></a>
+    </div><br>
+
+
+{% endblock %}
